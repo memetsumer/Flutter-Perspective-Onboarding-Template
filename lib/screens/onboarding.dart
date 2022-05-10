@@ -95,10 +95,8 @@ class _OnboardingState extends State<Onboarding> {
                 (int index) =>
                     AnimatedParticle(accelerometerValues: _gyroscopeValues)),
             BackdropFilter(
-                filter: ImageFilter.blur(sigmaX: 5, sigmaY: 5),
-                child: Container(
-                  color: Colors.white.withOpacity(0.1),
-                )),
+                filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
+                child: Container()),
             Column(
               children: [
                 Expanded(
@@ -144,7 +142,7 @@ class _OnboardingState extends State<Onboarding> {
               ),
               borderRadius: BorderRadius.circular(defaultPadding)),
           child: Container(
-            width: 220,
+            width: 180,
             height: 70,
             alignment: Alignment.center,
             child: Text(
